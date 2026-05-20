@@ -6,5 +6,5 @@ pandas
 numpy
 scikit-learn
 joblib
-opencv-python
+opencv-python-headless
 pillow
