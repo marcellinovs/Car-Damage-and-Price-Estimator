@@ -14,7 +14,7 @@ from ultralytics import YOLO
 # CONFIG
 # ==========================================
 st.set_page_config(
-    page_title="Car Damage & Price Estimator",
+    page_title="Car Damage & Price ksgimis ",
     layout="centered"
 )
 
@@ -25,7 +25,7 @@ MAX_IMAGES = 5
 # ==========================================
 # PATH
 # ==========================================
-DAMAGE_MODEL_PATH = "runs/detect/damage_model_new2/weights/best.pt"
+DAMAGE_MODEL_PATH = "runs/detect/damage_model_new5/weights/best.pt"
 
 PRICE_MODEL_PATH = "price_model.pkl"
 

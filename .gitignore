@@ -1,18 +1,99 @@
+# =========================
+# Python cache
+# =========================
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
+# =========================
+# Jupyter
+# =========================
 .ipynb_checkpoints/
 
+# =========================
+# Dataset training
+# =========================
 img2_dataset/
 
+# =========================
+# ZIP files
+# =========================
 *.zip
 
+# =========================
+# VSCode
+# =========================
 .vscode/
 
+# =========================
+# OS files
+# =========================
 .DS_Store
 Thumbs.db
 
+# =========================
 # Python Environment
+# =========================
 venv/
 env/
 .venv/
+
+# =========================
+# Old / unnecessary training runs
+# =========================
+runs/detect/train*/
+runs/detect/damage_model_new3/
+runs/detect/damage_model_new4/
+runs/detect/damage_model_v2/
+runs/segment/
+
+# =========================
+# Validation output files
+# =========================
+runs/detect/val*/
+runs/detect/val*/predictions.json
+
+# =========================
+# Large YOLO pretrained files
+# =========================
+yolov8n.pt
+yolov8s.pt
+yolov8m.pt
+yolov8n-seg.pt
+yolo11n.pt
+
+# =========================
+# Ignore training visualization outputs
+# =========================
+*.png
+*.jpg
+*.jpeg
+
+# =========================
+# Ignore CSV logs, but keep price dataset and final results if needed
+# =========================
+*.csv
+!prices_dataset/car_prices.csv
+!runs/detect/damage_model_new5/results.csv
+
+# =========================
+# Keep final deployed model files
+# =========================
+!runs/
+!runs/detect/
+!runs/detect/damage_model_new5/
+!runs/detect/damage_model_new5/weights/
+!runs/detect/damage_model_new5/weights/best.pt
+!runs/detect/damage_model_new5/results.png
+!runs/detect/damage_model_new5/confusion_matrix.png
+!runs/detect/damage_model_new5/confusion_matrix_normalized.png
+
+# =========================
+# Keep app-required files
+# =========================
+!app.py
+!requirements.txt
+!price_model.pkl
+!le_make.pkl
+!le_model.pkl
