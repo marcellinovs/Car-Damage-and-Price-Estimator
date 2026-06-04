@@ -18,7 +18,7 @@ st.set_page_config(
     layout="centered"
 )
 
-CONF_THRESHOLD = 0.45
+CONF_THRESHOLD = 0.25
 USD_TO_IDR = 16000
 MAX_IMAGES = 5
 
@@ -431,7 +431,7 @@ st.title("Car Damage & Price Estimator")
 # ==========================================
 # VEHICLE PHOTOS CARD
 # ==========================================
-st.markdown('<div class="card">', unsafe_allow_html=True)
+
 st.markdown('<div class="section-label">Vehicle photos</div>', unsafe_allow_html=True)
 
 uploaded_files = st.file_uploader(
@@ -470,12 +470,11 @@ if uploaded_files:
                 unsafe_allow_html=True
             )
 
-st.markdown('</div>', unsafe_allow_html=True)
 
 # ==========================================
 # VEHICLE DETAILS CARD
 # ==========================================
-st.markdown('<div class="card">', unsafe_allow_html=True)
+
 st.markdown('<div class="section-label">Vehicle details</div>', unsafe_allow_html=True)
 
 year = st.number_input(
@@ -584,7 +583,7 @@ if uploaded_files:
         # ==========================================
         # RESULT CARD
         # ==========================================
-        st.markdown('<div class="card">', unsafe_allow_html=True)
+
         st.markdown('<div class="section-label">Detection result</div>', unsafe_allow_html=True)
 
         # Block A — Metrics row
