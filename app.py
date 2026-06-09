@@ -503,7 +503,7 @@ odometer = st.number_input(
     value=80000
 )
 
-st.markdown('</div>', unsafe_allow_html=True)
+
 
 # ==========================================
 # PROCESS
@@ -584,8 +584,6 @@ if uploaded_files:
         # RESULT CARD
         # ==========================================
 
-        st.markdown('<div class="section-label">Detection result</div>', unsafe_allow_html=True)
-
         # Block A — Metrics row
         damage_pct = f"{avg_damage_ratio * 100:.1f}%"
         condition_str = f"{int(condition)} / 5"
@@ -640,8 +638,6 @@ if uploaded_files:
 </div>
 """, unsafe_allow_html=True)
 
-        # Divider
-        st.markdown('<hr class="thin-divider">', unsafe_allow_html=True)
 
         # Block D — Repair cost banner
         st.markdown(f"""
@@ -670,7 +666,6 @@ if uploaded_files:
 </div>
 """, unsafe_allow_html=True)
 
-        st.markdown('</div>', unsafe_allow_html=True)
 
         # ==========================================
         # DETECTION VISUALIZATION
@@ -682,12 +677,6 @@ if uploaded_files:
 
         for idx, results in enumerate(all_results):
 
-            st.markdown('<div class="card">', unsafe_allow_html=True)
-            st.markdown(
-                f'<div class="section-label">Image {idx + 1}</div>',
-                unsafe_allow_html=True
-            )
-
             annotated = results[0].plot()
 
             st.image(
@@ -695,4 +684,4 @@ if uploaded_files:
                 use_container_width=True
             )
 
-            st.markdown('</div>', unsafe_allow_html=True)
+         
